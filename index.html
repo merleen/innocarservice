@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="fonts/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<!-- Navigation -->
+	<header class="w3-container w3-light-grey w3-opacity" style="position: fixed; top: 0; width: 100%;">
+		<span id="burger_nav" class="w3-opennav w3-xlarge" onclick="w3_openSideNav()">&#9776;</span>
+		<span id="none_burger_nav" class="w3-opennav w3-xlarge">&nbsp;</span>
+	</header>
+	<div class="w3-top w3-light-grey">
+		<nav class="w3-sidenav w3-white w3-card-2 w3-round" style="display:none; height: 264px;" id="mySidenav">
+			<a href="javascript:void(0)" onclick="w3_closeSideNav()" class="w3-closenav w3-large w3-text-light-grey">Close &times;</a>
+			<a href="#" class="fa fa-home w3-xlarge"></a>
+			<a href="#galerie">Galerie</a>
+			<a href="#angebot">Angebot</a>
+			<a href="#we_are">Wer wir sind</a>
+			<a href="#gmap">Wo wir sind</a>
+			<a href="#kontakt">Kontakt</a>
+	  </nav>
+	</div>
+
+	<!-- Slide Show -->
+	<div class="w3-container" style="margin-top: 44px;">
+		<div class="slideshow-container">
+		  <div class="mySlides fade">
+			<img class="w3-round" src="header_imgs/1_.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade">
+			<img class="w3-round" src="header_imgs/2_.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade">
+			<img class="w3-round" src="header_imgs/3_.jpg" style="width:100%">
+		  </div>
+
+		  <a class="prev" onclick="plusSlides(-1)" style="border-radius: 0px 30px 30px 0px;">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)" style="border-radius: 30px 0px 0px 30px;">&#10095;</a>
+		</div>
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+	</div>
+
+	<!-- innocar -->
+	<div id="common" class="w3-container w3-center w3-content" style="max-width:800px">
+	  <h2 class="w3-wide">inno-carservices</h2>
+	  <p class="w3-opacity"><i>Herzlich Willkommen bei inno-carservices.</i></p>
+	  <p class="w3-justify">Wir sind eine freie KfZ-Meisterwerkstatt für alle Fahrzeugmarken und Transporter bis 5 Tonnen. Unsere Mitarbeiter werden durch ständige Weiterbildung auf dem aktuellen Stand der Technik gehlaten. Mit modernsten Analysegeräten können Fehler problemlos ausgelesen, analysiert und behoben werden.</p>
+	</div>
+	<div class="w3-content w3-center" style="max-width: 1500px;"><hr></div>
+
+	<!-- galerie -->
+	<div id="galerie" class="w3-container w3-center w3-content" style="max-width:1500px">
+	  <h2 class="w3-wide">galerie</h2>
+
+		<!-- Photo Grid -->
+		<div id="myGrid">
+		  <div class="w3-third">
+			<img src="galerie/4.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/1.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/7.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/10.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/13.jpg" style="width:100%" onclick="onClick(this)">
+		  </div>
+
+		  <div class="w3-third">
+			<img src="galerie/2.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/5.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/8.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/11.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/14.jpg" style="width:100%" onclick="onClick(this)">
+		</div>
+
+		  <div class="w3-third">
+			<img src="galerie/3.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/6.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/9.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/12.jpg" style="width:100%" onclick="onClick(this)">
+			<img src="galerie/15.jpg" style="width:100%" onclick="onClick(this)">
+		  </div>
+		</div>
+
+		<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+		  <div class="w3-modal-content w3-animate-zoom ">
+			<img id="img01" style="width:100%">
+		  </div>
+		</div>
+	</div>
+	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>
+
+	<!-- angebot -->
+	<div id="angebot" class="w3-container w3-content">
+	  <h2 class="w3-wide w3-center">angebot</h2>
+	  <ul class="w3-opacity">
+		<li class="w3-large w3-padding-medium">Reparatur aller Marken und Fabrikate, auch Transporter bis 5 Tonen</li>
+		<li class="w3-large w3-padding-medium">Hauptuntersuchung (TÜV / DEKRA) und Abgasuntersuchung</li>
+		<li class="w3-large w3-padding-medium">Unfallinstandsetzung / Karosseriearbeiten / Versicherungsabwicklung</li>
+		<li class="w3-large w3-padding-medium">Kfz-Elektrik</li>
+		<li class="w3-large w3-padding-medium">Lichttest / Beleuchtung</li>
+		<li class="w3-large w3-padding-medium">Bremsenservice</li>
+		<li class="w3-large w3-padding-medium">Fahrzeugdiagnose</li>
+		<li class="w3-large w3-padding-medium">Service / Inspektion / Kundendienst</li>
+		<li class="w3-large w3-padding-medium">Getriebe- und Kupplungsservice</li>
+		<li class="w3-large w3-padding-medium">Reifendienst / Felgenservice</li>
+		<li class="w3-large w3-padding-medium">Scheibenaustausch/ Reparatur</li>
+		<li class="w3-large w3-padding-medium">3D Achsvermessung</li>
+		<li class="w3-large w3-padding-medium">Lackierung</li>
+		<li class="w3-large w3-padding-medium">Ersatzteilverkauf</li>
+	  </ul>
+	</div>
+	<div class="w3-content w3-center" style="max-width: 1500px;"><hr></div>
+
+	<!-- wer wir sind -->
+	<div id="we_are" class="w3-center w3-content" style="max-width:800px">
+		<h2 class="w3-wide">wer wir sind</h2>
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<div class="w3-card-6 w3-dark-grey w3-round">
+					<div class="w3-container w3-center">
+					  <h5>Michael Och</h5>
+					  <img src="img/img_avatar3.png" alt="Avatar" style="width:80%">
+					  <h6>KfZ-Meister</h6>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third">
+				<div class="w3-card-6 w3-dark-grey w3-round">
+					<div class="w3-container w3-center">
+					  <h5>John K&uuml;hnert</h5>
+					  <img src="img/img_avatar3.png" alt="Avatar" style="width:80%">
+					  <h6>Schlosser</h6>
+					</div>
+				</div>
+			</div>	
+			<div class="w3-third">
+				<div class="w3-card-6 w3-dark-grey w3-round">
+					<div class="w3-container w3-center">
+					  <h5>Robertor Geiler</h5>
+					  <img src="img/img_avatar3.png" alt="Avatar" style="width:80%">
+					  <h6>freier Mitarbeiter</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>
+
+	<!-- wo wir sind -->
+	<div id="gmap" class="w3-container w3-content w3-center" style="max-width: 1500px;">
+		<h2 class="w3-wide">wo wir sind</h2>
+		<div id="map" style="width:100%;height:500px"></div>
+		<script>
+			function myMap() {
+			  var myCenter = new google.maps.LatLng(50.783444, 12.633888);
+			  var mapCanvas = document.getElementById("map");
+			  var mapOptions = {center: myCenter, zoom: 17};
+			  var map = new google.maps.Map(mapCanvas, mapOptions);
+			  var marker = new google.maps.Marker({position:myCenter});
+			  marker.setMap(map);
+			}
+		</script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+	</div>
+	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>
+
+	<!-- kontakt -->
+	<div id="kontakt" class="w3-content w3-center">
+		<h2 class="w3-wide">f&uuml;r kontaktfreudige</h2>
+	</div>
+	<div class="w3-container w3-theme-l5" style="max-width: 1500px; margin: auto;">
+		<div class="w3-row">
+			<div class="w3-col m5">
+				<div class="w3-padding-16"><span class="w3-xlarge w3-border-grey w3-bottombar">Adresse</span></div>
+				<p><i class="fa fa-map-marker w3-text-grey w3-xlarge"></i>&nbsp;&nbsp;Lungwitzer Str. 109 09356 St. Egidien</p>
+				<p><i class="fa fa-phone w3-text-grey w3-xlarge"></i>&nbsp;&nbsp;037204 / 928296</p>
+				<p><i class="fa fa-envelope-o w3-text-grey w3-xlarge"></i>&nbsp;&nbsp;<a style="text-decoration: none;" href="mailto:inno-car@t-online.de">inno-car@t-online.de</a></p>
+			</div>
+			<div class="w3-col m7">
+			  <form id="kontaktform" name="kontakt" method="POST" class="w3-container w3-card-4 w3-padding-16 w3-white">
+				  <div class="w3-group">      
+					<label class="w3-label w3-text-grey">Name</label>
+					<input class="w3-input" name="anfrager_name" type="text" required>
+				  </div>
+				  <div class="w3-group">      
+					<label class="w3-label w3-text-grey">Email</label>
+					<input class="w3-input" name="emailadr" type="email" required>
+				  </div>
+				  <div class="w3-group">      
+					<label class="w3-label w3-text-grey">Anliegen</label>
+					<input class="w3-input" name="anliegen" type="text" required>
+				  </div>
+				  <div id="form_response" class="w3-left"></div>
+				  <button id="send_btn" class="w3-btn w3-right w3-theme">senden</button>
+			  </form>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<footer class="w3-container w3-margin-top w3-center w3-black w3-xlarge">
+	  <p class="w3-tiny w3-text-grey">
+		<a href="#bottom" onclick="document.getElementById('impressum').style.display='block'">Impressum</a> | 
+		Design powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+	</footer>
+
+	<div id="impressum" class="w3-modal w3-animate-opacity">
+	  <div class="w3-modal-content w3-card-8">
+		<header class="w3-container w3-light-grey">
+		  <span onclick="document.getElementById('impressum').style.display='none'" class="w3-closebtn">&times;</span>
+		  <h2>Impressum</h2>
+		</header>
+			<div class="w3-justify w3-padding-medium">
+				<p>inno-carservice GmbH<br>
+				Lungwitzer Str 109<br>
+				09356 St. Egidien<br>
+			<br>
+				Tel.: 037204 / 928296<br>
+				Fax: 037204 / 605354<br>
+				Mobil: 0174 / 4743312<br>
+				E-Mail: inno-car@t-online.de<br>
+			<br>
+				USt.-ID-Nr.: DE309657712<br>
+				Steuernummer: 221/111/00792<br>
+				Handelsregister Chemnitz: HRB 30765<br>
+			<br><br>
+				Verantwortlich f&uuml;r den Inhalt gem&auml;&szlig; &sect;10 Absatz 3 MDStV sowie Verantwortlicher f&uuml;r die Domain www.inno-car.com:
+			<br>
+				inno-carservice GmbH<br>
+				Lungwitzer Str. 109 <br>
+				09356 St. Egidien <br>
+			</p>
+			<br>
+			Haftungsausschluss:<br>
+			<br>
+			1. Inhalt des Onlineangebotes<br>
+			Der Autor &uuml;bernimmt keinerlei Gew&auml;hr f&uuml;r die Aktualit&auml;t, Korrektheit, Vollst&auml;ndigkeit oder Qualit&auml;t der bereitgestellten Informationen. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlo&szlig;en, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;&szlig;iges Verschulden vorliegt. Alle Angebote sind freibleibend und unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ank&uuml;ndigung zu ver&auml;ndern, zu erg&auml;nzen, zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen. 
+			<br><br>
+			2. Verweise und Links<br>
+			Bei direkten oder indirekten Verweisen auf fremde Webseiten ("Hyperlinks"), die au&szlig;erhalb des Verantwortungsbereiches des Autors liegen, w&uuml;rde eine Haftungsverpflichtung ausschlie&szlig;lich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch m&ouml;glich und zumutbar w&auml;re, die Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor erkl&auml;rt hiermit ausdr&uuml;cklich, da&szlig; zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zuk&uuml;nftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verkn&uuml;pften Seiten hat der Autor keinerlei Einflu&szlig;. Deshalb distanziert er sich hiermit ausdr&uuml;cklich von allen Inhalten aller verlinkten / verkn&uuml;pften Seiten, die nach der Linksetzung ver&auml;ndert wurden. Diese Feststellung gilt f&uuml;r alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie f&uuml;r Fremdeintr&auml;ge in vom Autor eingerichteten G&auml;steb&uuml;chern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von Datenbanken, auf deren Inhalt externe Schreibzugriffe m&ouml;glich sind. F&uuml;r illegale, fehlerhafte oder unvollst&auml;ndige Inhalte und insbesondere f&uuml;r Sch&auml;den, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der &uuml;ber Links auf die jeweilige Ver&ouml;ffentlichung lediglich verweist. 
+			<br><br>
+			3. Urheber- und Kennzeichenrecht<br>
+			Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zur&uuml;ckzugreifen. Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte gesch&uuml;tzten Marken- und Warenzeichen unterliegen uneingeschr&auml;nkt den Bestimmungen des jeweils g&uuml;ltigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigent&uuml;mer. Allein aufgrund der blo&szlig;en Nennung ist nicht der Schlu&szlig; zu ziehen, da&szlig; Markenzeichen nicht durch Rechte Dritter gesch&uuml;tzt sind! Das Copyright f&uuml;r ver&ouml;ffentlichte, vom Autor selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielf&auml;ltigung oder Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdr&uuml;ckliche Zustimmung des Autors nicht gestattet. 
+			<br><br>
+			4. Datenschutz<br>
+			Sofern innerhalb des Internetangebotes die M&ouml;glichkeit zur Eingabe pers&ouml;nlicher oder gesch&auml;ftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdr&uuml;cklich freiwilliger Basis. Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist - soweit technisch m&ouml;glich und zumutbar - auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben ver&ouml;ffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von sogenannten Spam-Mails bei Verst&ouml;&szlig;en gegen dieses Verbot sind ausdr&uuml;cklich vorbehalten. 
+			<br><br>
+			5. Rechtswirksamkeit dieses Haftungsausschlusses<br>
+			Dieser Haftungsausschlu&szlig; ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollst&auml;ndig entsprechen sollten, bleiben die &uuml;brigen Teile des Dokumentes in ihrem Inhalt und ihrer G&uuml;ltigkeit davon unber&uuml;hrt. 
+			<br><br>
+			6. Cookies<br>
+			Wir setzen keine Cookies oder vergleichbare Technologien ein. Wir sind nicht am Verhalten unserer Besucher interessiert.
+			</div>
+	  </div>
+	</div>
+	
+	<script src="js/main.js"></script>
+	<script src="js/form.js"></script>
+</body>
+</html>
