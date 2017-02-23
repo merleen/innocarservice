@@ -66,7 +66,7 @@
 
 		<!-- Photo Grid -->
 		<div id="myGrid">
-		  <div class="w3-third">
+		  <div class="w3-third w3-grayscale-max">
 			<img src="galerie/4.jpg" style="width:100%" onclick="onClick(this)">
 			<img src="galerie/1.jpg" style="width:100%" onclick="onClick(this)">
 			<img src="galerie/7.jpg" style="width:100%" onclick="onClick(this)">
@@ -125,7 +125,7 @@
 	<div id="we_are" class="w3-center w3-content" style="max-width:800px">
 		<h2 class="w3-wide">wer wir sind</h2>
 		<div class="w3-row-padding">
-			<div class="w3-third">
+			<div class="w3-third w3-margin-bottom">
 				<div class="w3-card-6 w3-dark-grey w3-round">
 					<div class="w3-container w3-center">
 					  <h5>Michael Och</h5>
@@ -134,7 +134,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="w3-third">
+			<div class="w3-third w3-margin-bottom">
 				<div class="w3-card-6 w3-dark-grey w3-round">
 					<div class="w3-container w3-center">
 					  <h5>John K&uuml;hnert</h5>
@@ -143,7 +143,7 @@
 					</div>
 				</div>
 			</div>	
-			<div class="w3-third">
+			<div class="w3-third w3-margin-bottom">
 				<div class="w3-card-6 w3-dark-grey w3-round">
 					<div class="w3-container w3-center">
 					  <h5>Robertor Geiler</h5>
@@ -155,24 +155,46 @@
 		</div>
 	</div>
 	
-	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>
+	<div class="w3-content w3-center" style="max-width: 1500px; margin:30px 0 0 0;"><hr></div>
 
 	<!-- wo wir sind -->
 	<div id="gmap" class="w3-container w3-content w3-center" style="max-width: 1500px;">
-		<h2 class="w3-wide">wo wir sind</h2>
+		<h2 class="w3-wide">Wo wir sind</h2>
 		<div id="map" style="width:100%;height:500px"></div>
 		<script>
 			function myMap() {
-			  var myCenter = new google.maps.LatLng(50.783444, 12.633888);
-			  var mapCanvas = document.getElementById("map");
-			  var mapOptions = {center: myCenter, zoom: 17};
-			  var map = new google.maps.Map(mapCanvas, mapOptions);
-			  var marker = new google.maps.Marker({position:myCenter});
-			  marker.setMap(map);
+				var styleArray = [ 
+					{
+						featureType: 'all',
+						stylers: [
+							{ saturation: -80 }
+						]
+					},{
+						featureType: 'road.arterial',
+						elementType: 'geometry',
+						stylers: [
+							{ hue: '#00ffee' },
+							{ saturation: 50 }
+						]
+					},
+					{
+						featureType: 'poi.business',
+						elementType: 'labels',
+						stylers: [
+							{ visibility: 'off' }
+						]
+					}
+				];
+			
+				var myCenter = new google.maps.LatLng(50.783444, 12.633888);
+				var mapCanvas = document.getElementById("map");
+				var mapOptions = {center: myCenter, zoom: 17, styles: styleArray};
+				var map = new google.maps.Map(mapCanvas, mapOptions);
+				var marker = new google.maps.Marker({position:myCenter});
+				marker.setMap(map);
 			}
 		</script>
-
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk4lNAm3vtpaJJPN6HNOFCPFtHLCNl7jQ&callback=myMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk4lNAm3vtpaJJPN6HNOFCPFtHLCNl7jQ&callback=myMap"></script>
 	</div>
 	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>
 
@@ -183,7 +205,7 @@
 	<div class="w3-container w3-theme-l5" style="max-width: 1500px; margin: auto;">
 		<div class="w3-row">
 			<div class="w3-col m5">
-				<div class="w3-padding-16"><span class="w3-xlarge w3-border-grey w3-bottombar">Adresse</span></div>
+				<div class="w3-padding-16"><span class="w3-xlarge w3-border-grey w3-bottombar">adresse</span></div>
 				<p><i class="fa fa-map-marker w3-text-grey w3-xlarge"></i>&nbsp;&nbsp;Lungwitzer Str. 109 09356 St. Egidien</p>
 				<p><i class="fa fa-phone w3-text-grey w3-xlarge"></i>&nbsp;&nbsp;037204 / 928296</p>
 				<p><i class="fa fa-envelope-o w3-text-grey w3-xlarge"></i>&nbsp;&nbsp;<a style="text-decoration: none;" href="mailto:inno-car@t-online.de">inno-car@t-online.de</a></p>
