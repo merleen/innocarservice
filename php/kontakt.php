@@ -41,17 +41,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 
 	if($send) {
-		$empfaenger = "mirko.bemerl@gmx.de";
+		$empfaenger = "inno-car@t-online.de";
 		$betreff = "anfrage von webseite";
 		$from = "Von: " . $email;
 	
 		if($name) {
-			$comment = 'Name: ' . $name . "\n" . 'Anliegen: ' . $comment;
+			$comment = 'Name: ' . $name . "\n" . 'Email: ' . $email .  "\n" . 'Anliegen: ' . $comment;
 		}
 
-		$comment = 'Betreff: ' . $betreff . "\n" . $from . "\n" . $comment;
-		file_put_contents('email.txt', $comment);
-		//mail($empfaenger, $betreff, $comment, $from);
+		/* $comment = 'Betreff: ' . $betreff . "\n" . $from . "\n" . $comment;
+		file_put_contents('email.txt', $comment); */
+		mail($empfaenger, $betreff, $comment, $from);
 	}
 }
 ?>
