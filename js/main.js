@@ -119,6 +119,26 @@ function w3_closeSideNav() {
 }
 // /////////////////////////////
 
+// /////////////////////////////
+// viedschos
+
+function playVideo(element) {
+var player = element.childNodes[1];
+element.addEventListener(
+	'click'
+	, function() {
+		if( player.paused ) {
+			player.play();
+		}
+		else {
+			player.pause();
+		}
+	}
+	, false
+	);
+}
+// /////////////////////////////
+
 
 
 
