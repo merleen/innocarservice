@@ -11,13 +11,13 @@
 <body class="w3-text-grey">
 
 	<!-- Navigation -->
-	<header class="w3-container w3-light-grey w3-opacity w3-border-bottom" style="position: fixed; top: 0; width: 100%; z-index: 101;">
+	<header class="w3-container w3-light-grey w3-opacity w3-border-bottom" style="position: fixed; top: 0; width: 100%; z-index: 99;">
 		<span id="burger_nav" class="w3-opennav w3-xlarge" onclick="w3_openSideNav()">&#9776;</span>
 		<span id="none_burger_nav" class="w3-opennav w3-xlarge">&nbsp;</span>
 	</header>
-	<div class="w3-top w3-light-grey">
+	<div class="w3-top w3-light-grey" style="z-index: 100;">
 		<nav class="w3-sidenav w3-white w3-card-2 w3-round w3-text-dark-grey" style="display:none; height: 264px;" id="mySidenav">
-			<a href="javascript:void(0)" onclick="w3_closeSideNav()" class="w3-closenav w3-large w3-text-light-grey">Close &times;</a>
+			<a href="javascript:void(0)" onclick="w3_closeSideNav()" class="w3-closenav w3-large w3-text-grey">Close &times;</a>
 			<a href="#" class="fa fa-home w3-xlarge"></a>
 			<a href="#galerie">galerie</a>
 			<a href="#angebot">angebot</a>
@@ -31,25 +31,26 @@
 	<!-- Slide Show -->
 	<div class="w3-container" style="margin-top: 44px;">
 		<div class="slideshow-container">
-		  <div class="mySlides fade">
-			<img class="w3-round" src="header_imgs/1_.jpg" style="width:100%">
-		  </div>
-
-		  <div class="mySlides fade">
-			<img class="w3-round" src="header_imgs/2_.jpg" style="width:100%">
-		  </div>
-
-		  <div class="mySlides fade">
-			<img class="w3-round" src="header_imgs/3_.jpg" style="width:100%">
-		  </div>
-
-		  <a class="prev" onclick="plusSlides(-1)" style="border-radius: 0px 30px 30px 0px;">&#10094;</a>
-		  <a class="next" onclick="plusSlides(1)" style="border-radius: 30px 0px 0px 30px;">&#10095;</a>
+			<div class="mySlides fade">
+				<img class="w3-round" src="header_imgs/0_.jpg" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img class="w3-round" src="header_imgs/1_.jpg" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img class="w3-round" src="header_imgs/2_.jpg" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img class="w3-round" src="header_imgs/3_.jpg" style="width:100%">
+			</div>
+			<a class="prev" onclick="plusSlides(-1)" style="border-radius: 0px 30px 30px 0px;">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)" style="border-radius: 30px 0px 0px 30px;">&#10095;</a>
 		</div>
 		<div style="text-align:center">
-		  <span class="dot" onclick="currentSlide(1)"></span> 
-		  <span class="dot" onclick="currentSlide(2)"></span> 
-		  <span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(0)"></span>
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
 		</div>
 	</div>
 
@@ -57,7 +58,7 @@
 	<div id="common" class="w3-container w3-center w3-content" style="max-width:800px">
 	  <h2 class="w3-wide">inno-carservice</h2>
 	  <p class="w3-opacity"><i>Herzlich Willkommen bei inno-carservice.</i></p>
-	  <p class="w3-justify">Wir sind eine freie KfZ-Meisterwerkstatt für alle Fahrzeugmarken und Transporter bis 5 Tonnen. Unsere Mitarbeiter werden durch ständige Weiterbildung auf dem aktuellen Stand der Technik gehalten. Mit modernsten Analysegeräten können Fehler problemlos ausgelesen, analysiert und behoben werden.</p>
+	  <!--<p class="w3-justify">Wir sind eine freie KfZ-Meisterwerkstatt für alle Fahrzeugmarken und Transporter bis 5 Tonnen. Unsere Mitarbeiter werden durch ständige Weiterbildung auf dem aktuellen Stand der Technik gehalten. Mit modernsten Analysegeräten können Fehler problemlos ausgelesen, analysiert und behoben werden.</p>-->
 	</div>
 	<div class="w3-content w3-center" style="max-width: 1500px;"><hr></div>
 
@@ -102,9 +103,6 @@
 				<img id="img01" style="width:100%">
 			</div>
 		</div>
-		<div class="w3-container w3-content w3-center">
-			
-		</div>
 	</div>
 	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>
 
@@ -112,7 +110,7 @@
 	<div id="angebot" class="w3-container w3-content">
 	  <h2 class="w3-wide w3-center">angebot</h2>
 	  <ul class="w3-opacity w3-text-dark-grey">
-		<li class="w3-large w3-padding-medium">Reparatur aller Marken und Fabrikate, auch Transporter bis 5 Tonnen</li>
+		<li class="w3-large w3-padding-medium">Reparatur aller Pkw und Nutzfahrzeuge bis 5 Tonnen</li>
 		<li class="w3-large w3-padding-medium">Hauptuntersuchung (TÜV / DEKRA) und Abgasuntersuchung</li>
 		<li class="w3-large w3-padding-medium">Unfallinstandsetzung / Karosseriearbeiten / Versicherungsabwicklung</li>
 		<li class="w3-large w3-padding-medium">Kfz-Elektrik</li>
@@ -120,9 +118,9 @@
 		<li class="w3-large w3-padding-medium">Bremsenservice</li>
 		<li class="w3-large w3-padding-medium">Fahrzeugdiagnose</li>
 		<li class="w3-large w3-padding-medium">Service / Inspektion / Kundendienst</li>
-		<li class="w3-large w3-padding-medium">Getriebe- und Kupplungsservice</li>
+		<li class="w3-large w3-padding-medium">Klimaanlagenservice + Wartung und Reparatur</li>
 		<li class="w3-large w3-padding-medium">Reifendienst / Felgenservice</li>
-		<li class="w3-large w3-padding-medium">Scheibenaustausch/ Reparatur</li>
+		<li class="w3-large w3-padding-medium">Scheibenaustausch / Reparatur</li>
 		<li class="w3-large w3-padding-medium">3D Achsvermessung</li>
 		<li class="w3-large w3-padding-medium">Lackierung</li>
 		<li class="w3-large w3-padding-medium">Ersatzteilverkauf</li>
@@ -144,12 +142,12 @@
 					<div class="w3-large w3-padding-4">samstag</div><br>
 				</div> 
 				<div class="w3-half">
-					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
-					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
-					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
-					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
-					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
-					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8 bis 12 Uhr und 12.45 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8 bis 12 Uhr und 12.45 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8 bis 12 Uhr und 12.45 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8 bis 12 Uhr und 12.45 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8 bis 12 Uhr und 12.45 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">10 bis 12.30 Uhr</div><br>
 				</div>
 			</div>
 		</div>
@@ -197,39 +195,7 @@
 	<div id="gmap" class="w3-container w3-content w3-center" style="max-width: 1500px;">
 		<h2 class="w3-wide">wo wir sind</h2>
 		<div id="map" style="width:100%;height:500px"></div>
-		<script>
-			function myMap() {
-				var styleArray = [ 
-					{
-						featureType: 'all',
-						stylers: [
-							{ saturation: -80 }
-						]
-					},{
-						featureType: 'road.arterial',
-						elementType: 'geometry',
-						stylers: [
-							{ hue: '#00ffee' },
-							{ saturation: 50 }
-						]
-					},
-					{
-						featureType: 'poi.business',
-						elementType: 'labels',
-						stylers: [
-							{ visibility: 'off' }
-						]
-					}
-				];
-			
-				var myCenter = new google.maps.LatLng(50.783444, 12.633888);
-				var mapCanvas = document.getElementById("map");
-				var mapOptions = {center: myCenter, zoom: 16, styles: styleArray};
-				var map = new google.maps.Map(mapCanvas, mapOptions);
-				var marker = new google.maps.Marker({position:myCenter});
-				marker.setMap(map);
-			}
-		</script>
+		<script src="js/map.js"></script>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk4lNAm3vtpaJJPN6HNOFCPFtHLCNl7jQ&callback=myMap"></script>
 	</div>
 	<div class="w3-content w3-center" style="max-width: 1500px; margin:45px 0 0 0;"><hr></div>

@@ -139,6 +139,16 @@ element.addEventListener(
 }
 // /////////////////////////////
 
+// /////////////////////////////
+// copyright
+function init() {
+	var year =  new Date().getFullYear();
+	document.getElementById("copyright").innerHTML = "&#9400; inno-carservice 2015 - " + year + " | ";
+}
+init();
+// /////////////////////////////
+
+
 
 
 
