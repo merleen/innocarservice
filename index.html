@@ -8,22 +8,23 @@
 	<link rel="stylesheet" href="fonts/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="w3-text-grey">
 
 	<!-- Navigation -->
-	<header class="w3-container w3-light-grey w3-opacity w3-border-bottom" style="position: fixed; top: 0; width: 100%; z-index: 99;">
+	<header class="w3-container w3-light-grey w3-opacity w3-border-bottom" style="position: fixed; top: 0; width: 100%; z-index: 101;">
 		<span id="burger_nav" class="w3-opennav w3-xlarge" onclick="w3_openSideNav()">&#9776;</span>
 		<span id="none_burger_nav" class="w3-opennav w3-xlarge">&nbsp;</span>
 	</header>
 	<div class="w3-top w3-light-grey">
-		<nav class="w3-sidenav w3-white w3-card-2 w3-round" style="display:none; height: 264px;" id="mySidenav">
+		<nav class="w3-sidenav w3-white w3-card-2 w3-round w3-text-dark-grey" style="display:none; height: 264px;" id="mySidenav">
 			<a href="javascript:void(0)" onclick="w3_closeSideNav()" class="w3-closenav w3-large w3-text-light-grey">Close &times;</a>
 			<a href="#" class="fa fa-home w3-xlarge"></a>
-			<a href="#galerie">Galerie</a>
-			<a href="#angebot">Angebot</a>
-			<a href="#we_are">Wer wir sind</a>
-			<a href="#gmap">Wo wir sind</a>
-			<a href="#kontakt">Kontakt</a>
+			<a href="#galerie">galerie</a>
+			<a href="#angebot">angebot</a>
+			<a href="#zeiten">werkstattzeiten</a>
+			<!-- <a href="#we_are">wer wir sind</a> -->
+			<a href="#gmap">wo wir sind</a>
+			<a href="#kontakt">kontakt</a>
 	  </nav>
 	</div>
 
@@ -56,7 +57,7 @@
 	<div id="common" class="w3-container w3-center w3-content" style="max-width:800px">
 	  <h2 class="w3-wide">inno-carservice</h2>
 	  <p class="w3-opacity"><i>Herzlich Willkommen bei inno-carservice.</i></p>
-	  <p class="w3-justify">Wir sind eine freie KfZ-Meisterwerkstatt für alle Fahrzeugmarken und Transporter bis 5 Tonnen. Unsere Mitarbeiter werden durch ständige Weiterbildung auf dem aktuellen Stand der Technik gehlaten. Mit modernsten Analysegeräten können Fehler problemlos ausgelesen, analysiert und behoben werden.</p>
+	  <p class="w3-justify">Wir sind eine freie KfZ-Meisterwerkstatt für alle Fahrzeugmarken und Transporter bis 5 Tonnen. Unsere Mitarbeiter werden durch ständige Weiterbildung auf dem aktuellen Stand der Technik gehalten. Mit modernsten Analysegeräten können Fehler problemlos ausgelesen, analysiert und behoben werden.</p>
 	</div>
 	<div class="w3-content w3-center" style="max-width: 1500px;"><hr></div>
 
@@ -110,7 +111,7 @@
 	<!-- angebot -->
 	<div id="angebot" class="w3-container w3-content">
 	  <h2 class="w3-wide w3-center">angebot</h2>
-	  <ul class="w3-opacity">
+	  <ul class="w3-opacity w3-text-dark-grey">
 		<li class="w3-large w3-padding-medium">Reparatur aller Marken und Fabrikate, auch Transporter bis 5 Tonen</li>
 		<li class="w3-large w3-padding-medium">Hauptuntersuchung (TÜV / DEKRA) und Abgasuntersuchung</li>
 		<li class="w3-large w3-padding-medium">Unfallinstandsetzung / Karosseriearbeiten / Versicherungsabwicklung</li>
@@ -129,6 +130,32 @@
 	</div>
 	<div class="w3-content w3-center" style="max-width: 1500px;"><hr></div>
 
+	<!-- werkstattzeiten -->
+	<div id="zeiten" class="w3-container w3-content">
+		<h2 class="w3-wide w3-center" style="padding-bottom: 14px;">werkstattzeiten</h2>
+		<div class="w3-row">
+			<div class="w3-container w3-threequarter">
+				<div class="w3-half">
+					<div class="w3-large w3-padding-4">Montag</div><br>
+					<div class="w3-large w3-padding-4">Dienstag</div><br>
+					<div class="w3-large w3-padding-4">Mittwoch</div><br>
+					<div class="w3-large w3-padding-4">Donnerstag</div><br>
+					<div class="w3-large w3-padding-4">Freitag</div><br>
+					<div class="w3-large w3-padding-4">Samstag</div><br>
+				</div> 
+				<div class="w3-half">
+					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr und 12.30 bis 18 Uhr</div><br>
+					<div class="w3-large w3-padding-4">8.30 bis 12 Uhr</div><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="w3-content w3-center" style="max-width: 1500px;"><hr></div>
+	
 	<!-- wer wir sind -->
 	<!-- vorruebergehend ausgeblendet -->
 <!-- 	<div id="we_are" class="w3-center w3-content" style="max-width:800px">
@@ -168,7 +195,7 @@
 
 	<!-- wo wir sind -->
 	<div id="gmap" class="w3-container w3-content w3-center" style="max-width: 1500px;">
-		<h2 class="w3-wide">Wo wir sind</h2>
+		<h2 class="w3-wide">wo wir sind</h2>
 		<div id="map" style="width:100%;height:500px"></div>
 		<script>
 			function myMap() {
